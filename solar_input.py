@@ -45,8 +45,8 @@ def parse_star_parameters(line, star):
     """
     A = list(map(str, line.split()))
     star.color = A[2]
-    star.R = A[1]
-    star.m = A[3]
+    star.R = float(A[1])
+    star.m = float(A[3])
     star.x = float(A[4])
     star.y = float(A[5])
     star.Vx = float(A[6])
@@ -76,8 +76,8 @@ def parse_planet_parameters(line, planet):
     """
     A = list(map(str, line.split()))
     planet.color = A[2]
-    planet.R = A[1]
-    planet.m = A[3]
+    planet.R = float(A[1])
+    planet.m = float(A[3])
     planet.x = float(A[4])
     planet.y = float(A[5])
     planet.Vx = float(A[6])
