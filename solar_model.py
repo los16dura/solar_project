@@ -22,7 +22,7 @@ def calculate_force(body, space_objects):
         r = ((body.x - obj.x)**2 + (body.y - obj.y)**2)**0.5
         F = gravitational_constant * obj.m * body.m/(r**2)
         body.Fx += F*(obj.x - body.x)/r # FIXME: нужно вывести формулу...
-        body.Fy += F *(obj.y - body.y)/r  # FIXME: нужно вывести формулу...
+        body.Fy += F*(obj.y - body.y)/r  # FIXME: нужно вывести формулу...
 
 
 def move_space_object(body, dt):
@@ -32,12 +32,16 @@ def move_space_object(body, dt):
 
     **body** — тело, которое нужно переместить.
     """
+    print('Vx','=',body.Vx)
+    print('Vy','=',body.Vy)
     ay = body.Fy/body.m
-    body.y += body.Vy  # FIXME: не понимаю как менять...
+    body.y += body.Vy*dt+ ay*(dt**2)/2  # FIXME: не понимаю как менять...
     body.Vy += ay*dt
     ax = body.Fx/body.m
-    body.x += body.Vx  # FIXME: не понимаю как менять...
+    body.x += body.Vx*dt + ax*(dt**2)/2   # FIXME: не понимаю как менять...
     body.Vx += ax*dt
+    print('x','=',body.x)
+    print('y','=',body.y)
     # FIXME: not done recalculation of y coordinate!
 
 
