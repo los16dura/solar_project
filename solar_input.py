@@ -43,6 +43,9 @@ def parse_star_parameters(line, star):
     **line** — строка с описание звезды.
     **star** — объект звезды.
     """
+    #11111111111111111111
+
+
 
     pass  # FIXME: not done yet
 
