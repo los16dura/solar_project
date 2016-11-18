@@ -78,10 +78,10 @@ def parse_planet_parameters(line, planet):
     planet.color = A[2]
     planet.R = A[1]
     planet.m = A[3]
-    planet.x = int(A[4])
-    planet.y = int(A[5])
-    planet.Vx = int(A[6])
-    planet.Vy = int(A[7])
+    planet.x = float(A[4])
+    planet.y = float(A[5])
+    planet.Vx = float(A[6])
+    planet.Vy = float(A[7])
 
     pass  # FIXME: not done yet...
 
