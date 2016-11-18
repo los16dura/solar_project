@@ -47,10 +47,10 @@ def parse_star_parameters(line, star):
     star.color = A[2]
     star.R = A[1]
     star.m = A[3]
-    star.x = int(A[4])
-    star.y = int(A[5])
-    star.Vx = int(A[6])
-    star.Vy = int(A[7])
+    star.x = float(A[4])
+    star.y = float(A[5])
+    star.Vx = float(A[6])
+    star.Vy = float(A[7])
 
 
 
